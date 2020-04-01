@@ -2,7 +2,12 @@
 @import 'core/links';
 
 body {
-	background: url('../images/logo-adalab-80px.png') center center no-repeat $color-white;
+	background: linear-gradient(to bottom, rgb(41, 122, 68), rgb(231, 229, 85));
 	margin: 0;
 	height: 100vh;
+}
+.form{
+	display: flex;
+	border: black 1px dotted;
+	justify-content: center;	
 }
