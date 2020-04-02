@@ -31,8 +31,17 @@ function getServerData(){
 
 function paintCards() {
   let cardsPainting = "";
-  cardsPainting = 'a ver...'
-  cardsPainting = `<li>nombre: ${cardsList[0].name}</li><li>nombre: ${cardsList[1].name}</li><li>nombre: ${cardsList[2].name}</li><li>nombre: ${cardsList[3].name}</li>`
+  // cardsPainting = 'a ver...'
+  // cardsPainting = `<li>nombre: ${cardsList[0].name}</li><li>nombre: ${cardsList[1].name}</li><li>nombre: ${cardsList[2].name}</li><li>nombre: ${cardsList[3].name}</li>`
+  // cardsPainting += for (let i=0; i<cardsList.length; i++){
+  //   `<li>name: ${cardsList[i].name}</li>`;
+  // }
+  
+  for (let i = 0; i < cardsList.length; i++) {
+    cardsPainting += `<li class="card">name: ${cardsList[i].name}</li>`;
+    
+  }
+
   // console.log(cardsList);
   // cards.innerHTML = cardsList;
   cards.innerHTML = cardsPainting; 
