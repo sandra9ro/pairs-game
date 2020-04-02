@@ -30,10 +30,12 @@ function getServerData(){
 }
 
 function paintCards() {
-  cards.innerHTML = `<li>nombre: ${cardsList[0].name}</li><li>nombre: ${cardsList[1].name}</li><li>nombre: ${cardsList[2].name}</li><li>nombre: ${cardsList[3].name}</li>
-  `
+  let cardsPainting = "";
+  cardsPainting = 'a ver...'
+  cardsPainting = `<li>nombre: ${cardsList[0].name}</li><li>nombre: ${cardsList[1].name}</li><li>nombre: ${cardsList[2].name}</li><li>nombre: ${cardsList[3].name}</li>`
   // console.log(cardsList);
   // cards.innerHTML = cardsList;
+  cards.innerHTML = cardsPainting; 
 
 }
 
