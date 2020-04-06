@@ -38,7 +38,7 @@ function paintCards() {
   // }
   
   for (let i = 0; i < cardsList.length; i++) {
-    cardsPainting += `<li class="card">name: ${cardsList[i].name}</li>`;
+    cardsPainting += `<li class="card open">name: ${cardsList[i].name}</li>`;
     
   }
 

@@ -9,5 +9,28 @@ body {
 .form{
 	display: flex;
 	border: black 1px dotted;
-	justify-content: center;	
+	justify-content: center;
+}
+
+
+
+.cards{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+
+
+.card{
+	border: 1px black solid;
+	height: 20vh;
+	width: 20vw;
+	// background: image(../images/deck-image.jpg);
+	background-image: url("../images/deck-image.jpg");
+	background-image: center;	
+}
+
+
+ul{
+	list-style: none;
 }
