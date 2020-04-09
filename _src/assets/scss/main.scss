@@ -4,6 +4,7 @@
 body {
 	background: linear-gradient(to bottom, rgb(41, 122, 68), rgb(231, 229, 85));
 	margin: 0;
+	padding: 0;
 	height: 100vh;
 }
 .form{
@@ -25,11 +26,26 @@ body {
 	border: 1px black solid;
 	height: 20vh;
 	width: 20vw;
-	// background: image(../images/deck-image.jpg);
-	background-image: url("../images/deck-image.jpg");
-	background-image: center;	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
+.closed{
+	background-image: url("../images/deck-image.jpg");
+	background-image: center;	
+
+}
+
+.poke-img{
+	// border: medium black solid;
+}
+.poke-name{
+	// border: medium black dotted;
+	text-transform: capitalize;
+	
+}
 
 ul{
 	list-style: none;

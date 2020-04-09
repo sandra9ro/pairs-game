@@ -9,14 +9,18 @@
   </head>
   <body>
     <h2 class="main-title">Emparejando</h2>
-    <form class="form">
+    <form class="form" name="form">
       <label for="four">4</label>
-      <input type="radio" id="four" class="js-numberOfCards" name="cards-number">
+      <input type="radio" id="four" class="js-numberOfCards cartas" name="cardsNumber" value="4">
       <label for="six">6</label>
-      <input type="radio" id="six" class="js-numberOfCards" name="cards-number">
+      <input type="radio" id="six" class="js-numberOfCards cartas" name="cardsNumber" value="6" checked>
       <label for="eight">8</label>
-      <input type="radio" id="eight" class="js-numberOfCards" name="cards-number">
+      <input type="radio" id="eight" class="js-numberOfCards cartas" name="cardsNumber" value="8">
       <input type="button" value="Comenzar" class="button js-button">
+
+      <!-- if checked = true => espacio es igual al value del input ///// para esto antes tengo que recorrer los inputs ///// el número de la url debe estar sustituido por una constante que será igual a ese value ///
+      cuando entro en la página ese número debe estar disponible, puede ser 4 por defecto, cuando le doy al botón hay que leer el input y cambiar la constante
+    CHAPUZA: si uso un nombre de clase diferente para cada input puedo usar tres if/else y poner el valor del que sea checked===true -->
     </form>
     <main class="board">
       <ul class="js-cards cards"></ul>
