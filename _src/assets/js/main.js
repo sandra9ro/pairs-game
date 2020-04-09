@@ -51,8 +51,9 @@ function paintCards() {
 //Functions related to listening
 
 function handleButton() {
-  getServerData();
+  // debugger
   DetectCheckedOption();
+  getServerData();
 }
 
 
@@ -67,7 +68,6 @@ function DetectCheckedOption(){
 }  
 
 function listenToButtton() {
-  
   button.addEventListener("click",handleButton);
 }
 
