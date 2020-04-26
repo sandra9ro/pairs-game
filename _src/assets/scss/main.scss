@@ -39,18 +39,20 @@ body {
 	border: 2px solid black;
 	box-shadow: inset 0px 0px 0px 1px tomato;
 	box-sizing: border-box;
+	cursor: pointer;
 }
 
-.open{
-	// opacity: 0;
-}
 .poke-img{
 	// border: medium black solid;
 	width: 130px;	
+	opacity: 0;
 }
 .poke-name{
 	// border: medium black dotted;
 	text-transform: capitalize;
+}
+.open{
+	opacity: 100%;
 }
 
 ul{
