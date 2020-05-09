@@ -14,7 +14,7 @@ let numberForUrl = "";
 
 
 // Función con la que se ordenan las tarjetas aleatoriamente
-// Función copiada de: https://www.etnassoft.com/2011/02/15/manipulacion-de-arrays-en-javascript/ 
+// Función obtenida de: https://www.etnassoft.com/2011/02/15/manipulacion-de-arrays-en-javascript/ 
 
 Array.prototype.shuffle = function(){
   for (var i = this.length-1; i>0;i--){
@@ -81,7 +81,7 @@ function DetectCheckedOption(){
   for(let i=0; i< numberOfCards.length; i++){
     if (numberOfCards[i].checked === true){
       numberForUrl = numberOfCards[i].value;
-      console.log('valor: ', numberOfCards[i].value, 'constante: ', numberForUrl);
+      // console.log('valor: ', numberOfCards[i].value, 'constante: ', numberForUrl);
     }    
   }
 }
@@ -99,30 +99,58 @@ function listenToButtton() {
 let playingCards = [];
 let winningCards = 0;
 
+console.log(playingCards);
+
 
 function openCards(ev) {
   ev.target.classList.add("open");
   if (playingCards.length < 2){
     playingCards.push(ev.target)
-    console.log(playingCards);
+  // }else{
+  //   playingCards = [];
+  //   playingCards.push(ev.target)
   }  
+  console.log('playingCards: ',playingCards);  
+}
+
+// var timeoutID;
+// function delayClosing(){
+//   timeoutID = setTimeout(closeCards, 2000);
+// }
+// function closeCards(){
+//   for (let i=0; i < this.length; i++){
+//     this[i].classList.remove("open");
+//   }
+// }
+
+// function slowClose(){
+//   setTimeout(closeCards, 2000);
+// }
+
+function loguear(){
+  setInterval(console.log('holita'), 5000);  
 }
 
 
-function compareCards(ev){    
+function compareCards(){    
   if (playingCards.length == 2 && playingCards[0].alt == playingCards[1].alt){
     playingCards =[];
     winningCards += 2;
   }else if(playingCards.length == 2 && playingCards[0].alt !== playingCards[1].alt){
-      for (let i = 0; i < playingCards.length; i++) {
-      playingCards[i].classList.remove("open");
-    }
-    playingCards = [];
+    // setTimeout(closeCards, 1000);
+    // loguear();
+    setTimeout(()=>{for (const i=0; i<cardsList.length; i++) {
+      cardsList[i].classList.remove('open');}
+    }, 5000);
+
+    // for (let i = 0; i < playingCards.length; i++) {
+    //   playingCards[i].classList.remove("open");
+    //   }
+    // playingCards = [];
   }
 
-
-  
-  console.log('array: ', playingCards, 'constante:', winningCards);  
+    
+  // console.log('array: ', playingCards, 'constante:', winningCards);  
   listenToCard();
 }
 
@@ -146,5 +174,3 @@ function listenToCard(){
 
 listenToButtton();
 DetectCheckedOption();
-
-
