@@ -129,8 +129,9 @@ function alertWin(){
   }
 }
 
+
+//Función para que las cartas sólo sean escuchadas cuando están cerradas
 function tieneClase(ev){
-  // const cardOpen = ev.target.classList.contains("open");
   if(ev.target.classList.contains("open") === false){
     console.log('no la tiene');    
     openCards(ev);
