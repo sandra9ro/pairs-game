@@ -5,8 +5,13 @@ const cards = document.querySelector('.js-cards');
 const button = document.querySelector('.js-button');
 const numberOfCards = document.querySelectorAll('.js-numberOfCards');
 const card = document.querySelector('.js-card');
+//Variables para crear el tablero
 let cardsList = [];
 let numberForUrl = "";
+//Variables para jugar
+let playingCards = [];
+let winningCards = 0;
+
 
 
 //   I N I C I O   /   P R E P A R A C I Ó N    D E L    J U E G O
@@ -69,6 +74,7 @@ function paintCards() {
 //Functions related to listening
 
 function handleButton() {
+  winningCards = 0;
   DetectCheckedOption();
   getServerData();
 }
@@ -93,8 +99,6 @@ function listenToButtton() {
 
 //   D U R A N T E       E L       J U E G O
 
-let playingCards = [];
-let winningCards = 0;
 
 console.log(playingCards);
 
