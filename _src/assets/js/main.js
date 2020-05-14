@@ -1,5 +1,4 @@
 'use strict';
-// debugger
 console.log('>> Ready :)');
 
 const cards = document.querySelector('.js-cards');
@@ -70,7 +69,6 @@ function paintCards() {
 //Functions related to listening
 
 function handleButton() {
-  // debugger
   DetectCheckedOption();
   getServerData();
 }
@@ -81,7 +79,6 @@ function DetectCheckedOption(){
   for(let i=0; i< numberOfCards.length; i++){
     if (numberOfCards[i].checked === true){
       numberForUrl = numberOfCards[i].value;
-      // console.log('valor: ', numberOfCards[i].value, 'constante: ', numberForUrl);
     }    
   }
 }
@@ -106,57 +103,28 @@ function openCards(ev) {
   ev.target.classList.add("open");
   if (playingCards.length < 2){
     playingCards.push(ev.target)
-  // }else{
-  //   playingCards = [];
-  //   playingCards.push(ev.target)
   }  
-  console.log('playingCards: ',playingCards);  
-}
-
-// var timeoutID;
-// function delayClosing(){
-//   timeoutID = setTimeout(closeCards, 2000);
-// }
-// function closeCards(){
-//   for (let i=0; i < this.length; i++){
-//     this[i].classList.remove("open");
-//   }
-// }
-
-// function slowClose(){
-//   setTimeout(closeCards, 2000);
-// }
-
-function loguear(){
-  setInterval(console.log('holita'), 5000);  
 }
 
 
-function compareCards(){    
+function compareCards(){   
   if (playingCards.length == 2 && playingCards[0].alt == playingCards[1].alt){
     playingCards =[];
     winningCards += 2;
-  }else if(playingCards.length == 2 && playingCards[0].alt !== playingCards[1].alt){
-    // setTimeout(closeCards, 1000);
-    // loguear();
-    setTimeout(()=>{for (const i=0; i<cardsList.length; i++) {
-      cardsList[i].classList.remove('open');}
-    }, 5000);
-
-    // for (let i = 0; i < playingCards.length; i++) {
-    //   playingCards[i].classList.remove("open");
-    //   }
-    // playingCards = [];
+  }else if(playingCards.length == 2 && playingCards[0].alt !== playingCards[1].alt)
+  {
+    setTimeout(()=>{for(let i=0;i<playingCards.length;i++){
+      playingCards[i].classList.remove("open");
+      };
+      playingCards = [];
+    }, 500);
   }
-
-    
-  // console.log('array: ', playingCards, 'constante:', winningCards);  
   listenToCard();
 }
 
 function alertWin(){
   if (winningCards === cardsList.length){
-    alert('¡¡¡Has ganado!!! :D');
+    alert('¡¡¡  Has ganado :D  !!!');
     winningCards = 0;
   }
 }
