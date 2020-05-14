@@ -129,10 +129,23 @@ function alertWin(){
   }
 }
 
+function tieneClase(ev){
+  // const cardOpen = ev.target.classList.contains("open");
+  if(ev.target.classList.contains("open") === false){
+    console.log('no la tiene');    
+    openCards(ev);
+    compareCards(ev);
+  
+  }else{
+    console.log('sí la tiene');    
+  }
+}
+
 
 function play(ev){
-  openCards(ev);
-  compareCards(ev);
+  tieneClase(ev);
+  // openCards(ev);
+  // compareCards(ev);
   alertWin();
 }
 
