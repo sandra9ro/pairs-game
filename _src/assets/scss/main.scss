@@ -15,6 +15,8 @@ body {
 .main-title{
 	margin: 30px;
 	font-size: xx-large;
+	color: rgb(2, 51, 9);
+	font-style: oblique;
 }
 .form{
 	margin: 15px;
@@ -40,7 +42,7 @@ p{
 .card{
 	border: 1.5px black solid;
 	border-radius: 10px;
-	height: 20vh;
+	// height: 20vh;
 	width: 20vw;
 	display: flex;
 	flex-direction: column;
